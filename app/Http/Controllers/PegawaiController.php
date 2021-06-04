@@ -143,10 +143,10 @@ class PegawaiController extends Controller
 
         return redirect('pegawai');
     }
-    public function pdf()
-    {
-        $pegawai = Pegawai::all();
-        $pdf = PDF::loadView('pegawai.pdf', ['pegawai' => $pegawai]);
-        return $pdf->download('pegawai.pdf');
-    }
+    // public function pdf()
+    // {
+    //     $pegawai = Pegawai::all();
+    //     $pdf = PDF::loadView('pegawai.pdf', ['pegawai' => $pegawai]);
+    //     return $pdf->download('pegawai.pdf');
+    // }
 }
