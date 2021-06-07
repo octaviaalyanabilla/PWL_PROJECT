@@ -22,7 +22,7 @@ class PegawaiController extends Controller
     {
         //
         // dd('masuk');
-        $pegawai=Pegawai::all();
+        $pegawai = Pegawai::all();
         return view('pegawai.tampil', compact('pegawai'));
     }
 
@@ -34,12 +34,11 @@ class PegawaiController extends Controller
     public function create()
     {
         //
-        $agama =Agama::all();
-        $negara =Negara::all();
-        $darah =Darah::all();
-        $keluarga =Keluarga::all();
-        return view('pegawai.tambah' , compact('agama', 'negara', 'darah', 'keluarga'));
-        
+        $agama = Agama::all();
+        $negara = Negara::all();
+        $darah = Darah::all();
+        $keluarga = Keluarga::all();
+        return view('pegawai.tambah', compact('agama', 'negara', 'darah', 'keluarga'));
     }
 
     /**
@@ -53,21 +52,21 @@ class PegawaiController extends Controller
         //
         // dd('msk');
         $pegawai = new Pegawai;
-        $pegawai->nip = $request ->nip;
-        $pegawai->nama = $request ->nama;
-        $pegawai->tmpt_lahir = $request ->tmpt_lahir;
-        $pegawai->tgl_lahir = $request ->tgl_lahir;
-        $pegawai->jenis_kelamin = $request ->jenis_kelamin;
-        $pegawai->agama_id = $request ->agama_id;
-        $pegawai->negara_id = $request ->negara_id;
-        $pegawai->gol_darah_id = $request ->gol_darah_id;
-        $pegawai->skeluarga_id = $request ->skeluarga_id;
-        $pegawai->alamat = $request ->alamat;        
-        $pegawai->foto = $request ->foto;
-        $pegawai->nohp = $request ->nohp;        
-        
+        $pegawai->nip = $request->nip;
+        $pegawai->nama = $request->nama;
+        $pegawai->tmpt_lahir = $request->tmpt_lahir;
+        $pegawai->tgl_lahir = $request->tgl_lahir;
+        $pegawai->jenis_kelamin = $request->jenis_kelamin;
+        $pegawai->agama_id = $request->agama_id;
+        $pegawai->negara_id = $request->negara_id;
+        $pegawai->gol_darah_id = $request->gol_darah_id;
+        $pegawai->skeluarga_id = $request->skeluarga_id;
+        $pegawai->alamat = $request->alamat;
+        $pegawai->foto = $request->foto;
+        $pegawai->nohp = $request->nohp;
+
         $pegawai->save();
-        return redirect ('pegawai');
+        return redirect('pegawai');
     }
 
     /**
@@ -80,7 +79,7 @@ class PegawaiController extends Controller
     {
         //
         $pegawai = Pegawai::find($id);
-        return view ('pegawai.show', compact('pegawai'));
+        return view('pegawai.show', compact('pegawai'));
     }
 
     /**
@@ -92,13 +91,13 @@ class PegawaiController extends Controller
     public function edit($id)
     {
         //
-        
+
         $pegawai = Pegawai::find($id);
-        $agama =Agama::all();
-        $negara =Negara::all();
-        $darah =Darah::all();
-        $keluarga =Keluarga::all();
-        return view ('pegawai.edit', compact('pegawai', 'agama', 'negara', 'darah', 'keluarga'));
+        $agama = Agama::all();
+        $negara = Negara::all();
+        $darah = Darah::all();
+        $keluarga = Keluarga::all();
+        return view('pegawai.edit', compact('pegawai', 'agama', 'negara', 'darah', 'keluarga'));
     }
 
     /**
@@ -112,23 +111,22 @@ class PegawaiController extends Controller
     {
         //
         $pegawai = \App\Pegawai::find($id);
-        $pegawai->nip = $request ->nip;
-        $pegawai->nama = $request ->nama;
-        $pegawai->tmpt_lahir = $request ->tmpt_lahir;
-        $pegawai->tgl_lahir = $request ->tgl_lahir;
-        $pegawai->jenis_kelamin = $request ->jenis_kelamin;
-        $pegawai->agama_id = $request ->agama_id;
-        $pegawai->negara_id = $request ->negara_id;
-        $pegawai->gol_darah_id = $request ->gol_darah_id;
-        $pegawai->skeluarga_id = $request ->skeluarga_id;
-        $pegawai->alamat = $request ->alamat;        
-        $pegawai->foto = $request ->foto;
-        $pegawai->nohp = $request ->nohp;  
-        $pegawai->save();  
+        $pegawai->nip = $request->nip;
+        $pegawai->nama = $request->nama;
+        $pegawai->tmpt_lahir = $request->tmpt_lahir;
+        $pegawai->tgl_lahir = $request->tgl_lahir;
+        $pegawai->jenis_kelamin = $request->jenis_kelamin;
+        $pegawai->agama_id = $request->agama_id;
+        $pegawai->negara_id = $request->negara_id;
+        $pegawai->gol_darah_id = $request->gol_darah_id;
+        $pegawai->skeluarga_id = $request->skeluarga_id;
+        $pegawai->alamat = $request->alamat;
+        $pegawai->foto = $request->foto;
+        $pegawai->nohp = $request->nohp;
+        $pegawai->save();
 
 
         return redirect('pegawai');
-        
     }
 
     /**
@@ -147,8 +145,8 @@ class PegawaiController extends Controller
     }
     public function pdf()
     {
-        $pegawai=Pegawai::all();
-        $pdf = PDF::loadView('pegawai.pdf', ['pegawai'=>$pegawai]);
+        $pegawai = Pegawai::all();
+        $pdf = PDF::loadView('pegawai.pdf', ['pegawai' => $pegawai]);
         return $pdf->download('pegawai.pdf');
     }
 }
