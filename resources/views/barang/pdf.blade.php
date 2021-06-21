@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title>Rekap Data Pegawai</title>
+        <title>Rekap Data Barang Masuk </title>
         <body>
             <style type="text/css">
                 .tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;width: 100%; }
@@ -24,7 +24,7 @@
                 <th class="tg-3wr7">Nomor Telpon<br></th>
                 <th class="tg-3wr7">Alamat<br></th>
               </tr>
-              @foreach($pegawai as $tampil)
+              @foreach($barang as $tampil)
               <tr>
                 <td class="tg-rv4w" width="20%">{{$tampil->sku}}</td>
                 <td class="tg-rv4w" width="40%">{{$tampil->nama }}</td>
