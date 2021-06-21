@@ -1,6 +1,6 @@
 @extends('app')
 @section('title')
-Edit Pegawai
+Edit Barang
 @endsection
 @section('barang')
 active
@@ -24,49 +24,49 @@ active
           <div class="tile">
             <!-- <h3 class="tile-title">Register</h3> -->            
             <div class="tile-body">
-              <form class="form-horizontal" action="{{route('barang.update', $pegawai->id)}}" method="post">
+              <form class="form-horizontal" action="{{route('barang.update', $barang->id)}}" method="post">
               {{csrf_field()}}
               {{method_field('PUT')}}
                 <div class="form-group row">
                     <label class="control-label col-md-3">SKU</label>
                     <div class="col-md-8">
-                      <input class="form-control col-md-8" type="number" name="sku" value="{{$pegawai->sku}}">
+                      <input class="form-control col-md-8" type="number" name="sku" value="{{$barang->sku}}">
                     </div>
                 </div>
                 <div class="form-group row">
                   <label class="control-label col-md-3">Nama</label>
                   <div class="col-md-8">
-                    <input class="form-control" type="text" name="nama" value="{{$pegawai->nama}}">
+                    <input class="form-control" type="text" name="nama" value="{{$barang->nama}}">
                   </div>
                 </div>
                 <div class="form-group row">
                     <label class="control-label col-md-3">Nama Suplier</label>
                     <div class="col-md-8">
-                      <input class="form-control col-md-8" type="text" name="namasup" value="{{$pegawai->namasup}}">
+                      <input class="form-control col-md-8" type="text" name="namasup" value="{{$barang->namasup}}">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="control-label col-md-3">Tanggal Datang</label>
                     <div class="col-md-8">
-                        <input class="form-control col-md-8" type="date" name="tgl_datang" value="{{$pegawai->tgl_datang}}">
+                        <input class="form-control col-md-8" type="date" name="tgl_datang" value="{{$barang->tgl_datang}}">
                     </div>
                 </div>                                
                 <div class="form-group row">
                   <label class="control-label col-md-3">Alamat</label>
                   <div class="col-md-8">
-                    <textarea class="form-control" rows="4" name="alamat">{{$pegawai->alamat}}"</textarea>
+                    <textarea class="form-control" rows="4" name="alamat">{{$barang->alamat}}"</textarea>
                   </div>
                 </div>
                 <div class="form-group row">
                   <label class="control-label col-md-3">Foto</label>
                   <div class="col-md-8">
-                    <input class="form-control col-md-8" type="file" name="foto" value="{{$pegawai->foto}}">
+                    <input class="form-control col-md-8" type="file" name="foto" value="{{$barang->foto}}">
                   </div>
                 </div>
                 <div class="form-group row">
                     <label class="control-label col-md-3">Nomor HP</label>
                     <div class="col-md-8">
-                      <input class="form-control" type="number" name="nohp" value="{{$pegawai->nohp}}">
+                      <input class="form-control" type="number" name="nohp" value="{{$barang->nohp}}">
                     </div>
                 </div>
                 
