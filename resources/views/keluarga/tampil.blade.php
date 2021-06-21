@@ -1,5 +1,5 @@
 @section('title')
-Master Status Keluarga
+Master Status Pernikahan
 @endsection
 @section('master')
 active
@@ -9,13 +9,13 @@ active
     <main class="app-content">
       <div class="app-title">
         <div class="div">
-          <h1><i class="fa fa-laptop"></i> Master Status Keluarga</h1>
+          <h1><i class="fa fa-laptop"></i> Master Status Pernikahan</h1>
           <!-- <p>Bootstrap Components</p> -->
         </div>
         <ul class="app-breadcrumb breadcrumb">
           <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
           <li class="breadcrumb-item">Tabel Master</li>
-          <li class="breadcrumb-item"><a href="#">Status Keluarga</a></li>
+          <li class="breadcrumb-item"><a href="#">Status Pernikahan</a></li>
         </ul>
       </div>
       <!-- Buttons-->

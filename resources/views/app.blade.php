@@ -62,7 +62,7 @@
             <li><a class="treeview-item" href="{{route('agama.index')}}"><i class="icon fa fa-circle-o"></i> Agama</a></li>
             <li><a class="treeview-item" href="{{route('negara.index')}}"><i class="icon fa fa-circle-o"></i> Kewarganegaraan</a></li>
             <li><a class="treeview-item" href="{{route('darah.index')}}"><i class="icon fa fa-circle-o"></i> Golongan Darah</a></li>
-            <li><a class="treeview-item" href="{{route('keluarga.index')}}"><i class="icon fa fa-circle-o"></i> Keluarga</a></li>
+            <li><a class="treeview-item" href="{{route('keluarga.index')}}"><i class="icon fa fa-circle-o"></i> Status Pernikahan</a></li>
           </ul>
         </li>
         <li class="treeview"><a class="app-menu__item @yield('pegawai')" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-laptop"></i><span class="app-menu__label">Pegawai</span><i class="treeview-indicator fa fa-angle-right"></i></a>
