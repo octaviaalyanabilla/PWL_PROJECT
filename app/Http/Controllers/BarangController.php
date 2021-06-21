@@ -125,8 +125,8 @@ class BarangController extends Controller
     }
     public function pdf()
     {
-        $pegawai=Barang::all();
-        $pdf = PDF::loadView('barang.pdf', ['barang'=>$pegawai]);
+        $barang=Barang::all();
+        $pdf = PDF::loadView('barang.pdf', ['barang'=>$barang]);
         return $pdf->download('barang.pdf');
     }
 }
