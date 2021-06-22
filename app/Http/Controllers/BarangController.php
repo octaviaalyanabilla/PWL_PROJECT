@@ -121,7 +121,7 @@ class BarangController extends Controller
         $pegawai = Barang::find($id);
         $pegawai->delete();
 
-        return redirect('pegawai');
+        return redirect('barang');
     }
     public function pdf()
     {
